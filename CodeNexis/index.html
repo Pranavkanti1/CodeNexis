@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeNexis</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- THEME BAR -->
+    <div id="theme-bar">
+        <span>Theme:</span>
+        <div class="tbtn tc active" onclick="setTheme('','Cyber Cyan',this)"></div>
+        <div class="tbtn tp" onclick="setTheme('theme-purple','Neon Purple',this)"></div>
+        <div class="tbtn tg" onclick="setTheme('theme-green','Matrix Green',this)"></div>
+        <div class="tbtn tr" onclick="setTheme('theme-red','Fire Red',this)"></div>
+        <span id="tlabel">Cyber Cyan</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <div id="navbar">
+        <div id="logo">
+            <div class="logo-circle">CN</div>
+            <div class="logo-name" onclick="goToHome()">Code<span>Nexis</span></div>
+        </div>
+        <div id="nav-links">
+            <div class="nav-link" onclick="goToHome()">Home</div>
+            <div class="nav-link" onclick="goToCourses()" >Courses</div>
+            <div class="nav-link" onclick="goToAbout()">About</div>
+            <div class="nav-link" onclick="goToContact()">Contact</div>
+        </div>
+        <div id="nav-right" style="position: relative;">
+          <input id="search-box" type="text"
+          placeholder="Search courses... 🔍"
+          autocomplete="off" />
+            <button id="btn-login">Login</button>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <div id="hero-left">
+            <div id="tagline">
+                Start<span class="da">.</span> Struggle<span class="db">.</span> Succeed
+            </div>
+            <div id="hero-divider"></div>
+            <div id="typewriter-line">
+                <span id="static-text">Code With —&nbsp;</span>
+                <span id="typing-name"></span>
+            </div>
+            <div id="headline">
+                Learn &amp; Master<br>
+                <span class="hl">DSA</span> &amp; Development
+            </div>
+            <button id="btn-explore" onclick="goToCourses()">Explore Courses →</button>
+        </div>
+
+        <div id="hero-right">
+          <div id="hero-right">
+
+            <!-- CODE BOX -->
+            <!-- <div class="code-wrap">
+                <div class="code-dots">
+                    <div class="dot dr"></div>
+                    <div class="dot dy"></div>
+                    <div class="dot dg"></div>
+                </div> -->
+                <!-- <div class="cc">// Start your journey</div>
+                <div><span class="ck">function</span> <span class="cf">solve</span>(problem) {</div>
+                <div>&nbsp;&nbsp;<span class="ck">const</span> skill = <span class="cs">"DSA"</span>;</div>
+                <div>&nbsp;&nbsp;<span class="ck">let</span> effort = <span class="cn">100</span>;</div>
+                <div>&nbsp;&nbsp;<span class="ck">while</span>(effort > <span class="cn">0</span>) {</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="cf">practice</span>(skill);</div>
+                <div>&nbsp;&nbsp;}</div>
+                <div>&nbsp;&nbsp;<span class="ck">return</span> <span class="cs">"success"</span>;</div>
+                <div>}</div> -->
+            </div>
+        
+            <!-- IMAGE -->
+            <img src="homePic.jpeg" alt="Hero Image" id="hero-img">
+        
+        </div>
+            
+        </div>
+               
+                <!-- <div class="cc">// Start your journey</div>
+                <div><span class="ck">function</span> <span class="cf">solve</span>(problem) {</div>
+                <div>&nbsp;&nbsp;<span class="ck">const</span> skill = <span class="cs">"DSA"</span>;</div>
+                <div>&nbsp;&nbsp;<span class="ck">let</span> effort = <span class="cn">100</span>;</div>
+                <div>&nbsp;&nbsp;<span class="ck">while</span>(effort > <span class="cn">0</span>) {</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="cf">practice</span>(skill);</div>
+                <div>&nbsp;&nbsp;}</div>
+                <div>&nbsp;&nbsp;<span class="ck">return</span> <span class="cs">"success"</span>;</div>
+                <div>}</div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div id="stats">
+        <div class="stat">
+            <div class="stat-n">50K+</div>
+            <div class="stat-l">Students Enrolled</div>
+        </div>
+        <div class="stat">
+            <div class="stat-n">120+</div>
+            <div class="stat-l">Expert Courses</div>
+        </div>
+        <div class="stat">
+            <div class="stat-n">98%</div>
+            <div class="stat-l">Placement Rate</div>
+        </div>
+        <div class="stat">
+            <div class="stat-n">4.9★</div>
+            <div class="stat-l">Average Rating</div>
+        </div>
+    </div>
+
+    <!-- COURSES SECTION -->
+    <section id="courses">
+        <div class="sec-head">
+            <div class="sec-title">Popular <span>Courses</span></div>
+            <div class="sec-sub">Master in-demand skills with hands-on projects</div>
+        </div>
+        <div class="grid-3">
+            <div class="c-card">
+                <div class="c-icon">⚡</div>
+                <div class="c-title">DSA Masterclass</div>
+                <div class="c-desc">Complete Data Structures & Algorithms from basics to advanced. Crack top product companies.</div>
+                <div class="badges">
+                    <span class="badge a1">120 Lessons</span>
+                    <span class="badge a2">Bestseller</span>
+                </div>
+            </div>
+            <div class="c-card alt">
+                <div class="c-icon">🌐</div>
+                <div class="c-title">Full Stack Web Dev</div>
+                <div class="c-desc">Build modern web apps with React, Node.js and MongoDB. Deploy to production.</div>
+                <div class="badges">
+                    <span class="badge a1">95 Lessons</span>
+                    <span class="badge a2">New</span>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-icon">🧠</div>
+                <div class="c-title">System Design</div>
+                <div class="c-desc">Design scalable systems like Netflix & Uber. Essential for senior engineering interviews.</div>
+                <div class="badges">
+                    <span class="badge a1">60 Lessons</span>
+                    <span class="badge a2">Advanced</span>
+                </div>
+            </div>
+            <div class="c-card alt">
+                <div class="c-icon">📱</div>
+                <div class="c-title">React &amp; Next.js</div>
+                <div class="c-desc">Build professional UIs & SSR apps. Learn hooks, state management & more.</div>
+                <div class="badges">
+                    <span class="badge a1">80 Lessons</span>
+                    <span class="badge a2">Popular</span>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-icon">🐍</div>
+                <div class="c-title">Python &amp; ML Basics</div>
+                <div class="c-desc">Python fundamentals to Machine Learning. Real-world projects included.</div>
+                <div class="badges">
+                    <span class="badge a1">75 Lessons</span>
+                    <span class="badge a2">Trending</span>
+                </div>
+            </div>
+            <div class="c-card alt">
+                <div class="c-icon">☁️</div>
+                <div class="c-title">DevOps &amp; Cloud</div>
+                <div class="c-desc">Docker, Kubernetes, CI/CD and AWS deployment for modern developers.</div>
+                <div class="badges">
+                    <span class="badge a1">65 Lessons</span>
+                    <span class="badge a2">Hot</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features">
+        <div class="sec-head">
+            <div class="sec-title">Why Choose <span>CodeNexis?</span></div>
+            <div class="sec-sub">Everything you need to go from beginner to professional</div>
+        </div>
+        <div class="grid-4">
+            <div class="f-card">
+                <div class="f-icon">🎯</div>
+                <div class="f-title">Structured Path</div>
+                <div class="f-desc">Curated roadmaps by industry experts to maximize your growth.</div>
+            </div>
+            <div class="f-card">
+                <div class="f-icon">💻</div>
+                <div class="f-title">Live Coding</div>
+                <div class="f-desc">Write, run and debug code right inside the browser.</div>
+            </div>
+            <div class="f-card">
+                <div class="f-icon">🏆</div>
+                <div class="f-title">Contests &amp; Badges</div>
+                <div class="f-desc">Compete in weekly challenges and earn certificates.</div>
+            </div>
+            <div class="f-card">
+                <div class="f-icon">🤝</div>
+                <div class="f-title">Placement Support</div>
+                <div class="f-desc">Mock interviews and referrals to top tech companies.</div>
+            </div>
+        </div>
+    </section>
+
+  
+    
+    <!-- ================= COURSES (TERA PREMIUM SAME KA SAME) ================= -->
+    <section id="courses3">
+    <div class="courses-grid">
+
+        <!-- CARD 1 -->
+      
+        <div class="pro-card">
+          <div class="card-top">
+            <img src="dsa2.png" alt="DSA">
+          </div>
+      
+      
+      <div class="card-body">
+        <div class="level beginner">BEGINNER</div>
+        <div class="category">DSA</div>
+      
+        <h3>DSA Masterclass — Zero to Hero</h3>
+        <p class="desc">Complete Data Structures & Algorithms. Crack FAANG interviews.</p>
+      
+        <div class="tags">
+          <span>Arrays</span>
+          <span>Trees</span>
+          <span>Graphs</span>
+          <span>DP</span>
+        </div>
+      
+        <div class="instructor">
+          <div class="avatar">PK</div>
+          <div>
+            <div class="name">Pranav Kanti</div>
+            <div class="role">Senior SDE</div>
+          </div>
+        </div>
+      
+        <div class="price-row">
+          <div>
+            <span class="price">₹999</span>
+            <span class="old">₹4999</span>
+          </div>
+          
+
+          <a href="DSA.html">
+            <button>Enroll Now</button>
+          </a>
+
+
+
+        </div>
+      </div>
+      
+      
+        </div>
+      
+        <!-- CARD 2 -->
+      
+        <div class="pro-card">
+          <div class="card-top">
+            <img src="webD2.png" alt="Web Dev">
+          </div>
+      
+      
+      <div class="card-body">
+        <div class="level intermediate">INTERMEDIATE</div>
+        <div class="category">WEB DEV</div>
+      
+        <h3>Full Stack Web Development</h3>
+        <p class="desc">React, Node.js, Express & MongoDB with real projects.</p>
+      
+        <div class="tags">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>MongoDB</span>
+        </div>
+      
+        <div class="instructor">
+          <div class="avatar">PK</div>
+          <div>
+            <div class="name">Pranav Kanti</div>
+            <div class="role">Full Stack Dev</div>
+          </div>
+        </div>
+      
+        <div class="price-row">
+          <div>
+            <span class="price">₹1299</span>
+            <span class="old">₹5999</span>
+          </div>
+          
+          <a href="fullStack.html">
+            <button>Enroll Now</button>
+          </a>
+
+        </div>
+      </div>
+    
+      
+        </div>
+      
+        <!-- CARD 3 -->
+      
+        <div class="pro-card">
+          <div class="card-top">
+            <img src="SystemDesign3..jpg" alt="System Design">
+          </div>
+      
+      
+      <div class="card-body">
+        <div class="level advanced">ADVANCED</div>
+        <div class="category">SYSTEM</div>
+      
+        <h3>System Design Mastery</h3>
+        <p class="desc">Design scalable systems like Netflix & Uber.</p>
+      
+        <div class="tags">
+          <span>HLD</span>
+          <span>LLD</span>
+          <span>Scaling</span>
+        </div>
+      
+        <div class="instructor">
+          <div class="avatar">PK</div>
+          <div>
+            <div class="name">Pranav Kanti</div>
+            <div class="role">Senior Engineer</div>
+          </div>
+        </div>
+      
+        <div class="price-row">
+          <div>
+            <span class="price">₹1499</span>
+            <span class="old">₹6999</span>
+          </div>
+          
+          <a href="systemDesign.html">
+            <button>Enroll Now</button>
+          </a>
+        </div>
+      </div>
+      
+      
+        </div>
+      
+        <!-- CARD 4 -->
+      
+        <div class="pro-card">
+          <div class="card-top">
+            <img src="react2.png" alt="React Next">
+          </div>
+      
+      
+      <div class="card-body">
+        <div class="level beginner">BEGINNER</div>
+        <div class="category">FRONTEND</div>
+      
+        <h3>React & Next.js</h3>
+        <p class="desc">Build modern fast apps with React & Next.js.</p>
+      
+        <div class="tags">
+          <span>React</span>
+          <span>Next.js</span>
+          <span>SEO</span>
+        </div>
+      
+        <div class="instructor">
+          <div class="avatar">PK</div>
+          <div>
+            <div class="name">Pranav Kanti</div>
+            <div class="role">Frontend Dev</div>
+          </div>
+        </div>
+      
+        <div class="price-row">
+          <div>
+            <span class="price">₹899</span>
+            <span class="old">₹3999</span>
+          </div>
+          <a href="rect.html">
+            <button>Enroll Now</button>
+          </a>
+        </div>
+      </div>
+      
+      
+        </div>
+      
+        <!-- CARD 5 -->
+      
+        <div class="pro-card">
+          <div class="card-top">
+            <img src="python2.png" alt="Python ML">
+          </div>
+      
+      
+      <div class="card-body">
+        <div class="level beginner">BEGINNER</div>
+        <div class="category">ML</div>
+      
+        <h3>Python & ML Basics</h3>
+        <p class="desc">Start machine learning with Python.</p>
+      
+        <div class="tags">
+          <span>Python</span>
+          <span>ML</span>
+          <span>Data</span>
+        </div>
+      
+        <div class="instructor">
+          <div class="avatar">PK</div>
+          <div>
+            <div class="name">Pranav Kanti</div>
+            <div class="role">ML Engineer</div>
+          </div>
+        </div>
+      
+        <div class="price-row">
+          <div>
+            <span class="price">₹799</span>
+            <span class="old">₹2999</span>
+          </div>
+          <a href="python.html">
+            <button>Enroll Now</button>
+          </a>
+        </div>
+      </div>
+      
+      
+        </div>
+      
+        <!-- CARD 6 -->
+      
+        <div class="pro-card">
+          <div class="card-top">
+            <img src="devops.png" alt="DevOps">
+          </div>
+      
+      
+      <div class="card-body">
+        <div class="level advanced">ADVANCED</div>
+        <div class="category">DEVOPS</div>
+      
+        <h3>DevOps & Cloud</h3>
+        <p class="desc">Master Docker, Kubernetes & AWS.</p>
+      
+        <div class="tags">
+          <span>Docker</span>
+          <span>K8s</span>
+          <span>AWS</span>
+        </div>
+      
+        <div class="instructor">
+          <div class="avatar">PK</div>
+          <div>
+            <div class="name">Pranav Kanti</div>
+            <div class="role">DevOps Engineer</div>
+          </div>
+        </div>
+      
+        <div class="price-row">
+          <div>
+            <span class="price">₹1199</span>
+            <span class="old">₹4999</span>
+          </div>
+          <a href="devops.html">
+            <button>Enroll Now</button>
+          </a>
+        </div>
+      </div>
+      
+      
+        </div>
+      
+      </div>
+    </section>
+   
+    
+      </div>
+    
+    </section>
+    
+    <!-- ================= SCRIPT ================= -->
+    
+    <script>
+    function scrollToSection(id){
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+    </script>
+    
+    </body>
+    </html>
+    <!-- ....................about............ -->
+    
+    <section id="about" class="about-section">
+
+        <div class="about-container">
+      
+          <!-- LEFT -->
+          <div class="about-left">
+            <h2>About <span>CodeNexis</span></h2>
+      
+            <p>
+              CodeNexis is not just another learning platform — it's a complete ecosystem 
+              designed to transform beginners into industry-ready developers.
+            </p>
+      
+            <p>
+              We focus on practical learning, real-world projects, and strong fundamentals 
+              so you don’t just watch tutorials — you actually build and grow.
+            </p>
+      
+            <p>
+              Whether you're starting from scratch or upgrading your skills, CodeNexis 
+              provides a clear roadmap to help you achieve your tech career goals.
+            </p>
+      
+            <!-- FEATURES -->
+            <div class="about-features">
+              <div>🚀 Real-world Projects</div>
+              <div>💼 Placement Focused</div>
+              <div>🧠 Concept Clarity</div>
+              <div>📈 Career Growth</div>
+            </div>
+      
+            <!-- STATS -->
+            <div class="about-stats">
+              <div>
+                <h3>10K+</h3>
+                <p>Students</p>
+              </div>
+              <div>
+                <h3>50+</h3>
+                <p>Projects</p>
+              </div>
+              <div>
+                <h3>20+</h3>
+                <p>Courses</p>
+              </div>
+              <div>
+                <h3>95%</h3>
+                <p>Success Rate</p>
+              </div>
+            </div>
+      
+          </div>
+      
+          <!-- RIGHT -->
+          <div class="about-right">
+            <img src="your-image-link" alt="about">
+          </div>
+      
+        </div>
+      
+        <!-- EXTRA SECTION -->
+        <div class="about-extra">
+      
+          <h3>Why Choose CodeNexis?</h3>
+      
+          <div class="about-cards">
+      
+            <div class="about-card">
+              <h4>📚 Structured Learning</h4>
+              <p>Step-by-step roadmap so you never feel lost.</p>
+            </div>
+      
+            <div class="about-card">
+              <h4>🛠 Hands-on Projects</h4>
+              <p>Build real apps like industry developers.</p>
+            </div>
+      
+            <div class="about-card">
+              <h4>🎯 Placement Ready</h4>
+              <p>Interview prep + DSA + System Design included.</p>
+            </div>
+      
+            <div class="about-card">
+              <h4>⚡ Fast Growth</h4>
+              <p>Learn smarter, not harder with optimized paths.</p>
+            </div>
+      
+          </div>
+      
+        </div>
+      
+      </section>
+      
+  <!-- .......................contact....................................... -->
+
+  <section id="contact" class="contact-section">
+
+    <div class="contact-container">
+  
+      <!-- LEFT -->
+      <div class="contact-left">
+        <h2>Contact <span>Us</span></h2>
+  
+        <p>
+          Have questions or want to collaborate?  
+          Reach out to us and we’ll get back to you soon.
+        </p>
+  
+        <div class="contact-info">
+          <p>📧 Email: codenexis@gmail.com</p>
+          <p>📞 Phone: +91 93112 98991</p>
+          <p>📍 Location: India</p>
+        </div>
+      </div>
+   
+  
+
+
+      <!-- RIGHT FORM -->
+      <div class="contact-right">
+        <form>
+  
+          <input type="text" placeholder="Your Name" required>
+  
+          <input type="email" placeholder="Your Email" required>
+  
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+  
+          <button type="submit">Send Message 🚀</button>
+  
+        </form>
+      </div>
+  
+
+
+
+      
+    </div>
+  
+
+    
+      <!-- .................left down ................... -->
+
+      <div class="social-links">
+
+        <a href="https://www.instagram.com/pranavkanti06/" target="_blank" class="social-btn insta">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      
+        <a href="www.linkedin.com/in/pranav-kanti-3a7bb1288" target="_blank" class="social-btn linkedin">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      
+        <a href="https://twitter.com/yourusername" target="_blank" class="social-btn twitter">
+          <i class="fab fa-x-twitter"></i> X (Twitter)
+        </a>
+      
+      </div>
+  </section>
+
+
+
+
+
+
+    <!-- CTA SECTION -->
+    <section id="cta">
+        <h2>Ready to Start <span>Coding?</span></h2>
+        <p>Join 50,000+ students already learning on CodeNexis. Your dream job starts here.</p>
+        <button id="btn-start" onclick="goToCourses()">Get Started</button>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <div>Code<span class="footer-accent">Nexis</span> © 2026 — All rights reserved</div>
+        <div>Made with ❤️ for developers</div>
+    </div>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
