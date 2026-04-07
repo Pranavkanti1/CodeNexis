@@ -948,3 +948,31 @@ body {
   color: var(--a1);
 }
 .match { color: var(--a1); }
+
+
+@media (max-width: 768px) {
+
+  #hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #hero img {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
